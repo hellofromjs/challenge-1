@@ -15,7 +15,7 @@ const people = [
 		city: 'Alytus',
 	},
 	{
-		name: "Anrdius",
+		name: "Andrius",
 		age: 40,
 		city: 'Alytus',
 	},
@@ -23,6 +23,11 @@ const people = [
 		name: "Zygimantas",
 		age: 35,
 		city: 'Alytus',
+	},
+	{
+		name: "Kazys",
+		age: 30,
+		city: 'Vilnius',
 	},
 ]
 
