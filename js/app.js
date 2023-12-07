@@ -58,8 +58,7 @@ void function init() {
 }()
 
 // on button click do filtering
-document.querySelector('#filter').addEventListener('click', e => {
-	e.preventDefault()
+filter_input.addEventListener('input', e => {
 
 	const filtered_people = people.filter((element) => operations[operations_list.value].fn(element[properties_list.value], filter_input.value))
 
