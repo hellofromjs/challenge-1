@@ -57,9 +57,20 @@ void function init() {
 	print_data(document.querySelector('#data-list'), people)
 }()
 
-// on button click do filtering
-filter_input.addEventListener('input', e => {
+properties_list.addEventListener('change', e => {
+	filtering()
+})
 
+operations_list.addEventListener('change', e => {
+	filtering()
+})
+
+filter_input.addEventListener('input', e => {
+	filtering()
+})
+
+function filtering()
+{
 	const filtered_people = people.filter((element) => operations[operations_list.value].fn(element[properties_list.value], filter_input.value))
 
 	const filtered_list = document.querySelector('#filtered-list')
@@ -67,7 +78,7 @@ filter_input.addEventListener('input', e => {
 	filtered_list.replaceChildren()
 
 	print_data(filtered_list, filtered_people)
-})
+}
 
 function generate_properties_options() {
 	const properties = Object.keys(people[0])
